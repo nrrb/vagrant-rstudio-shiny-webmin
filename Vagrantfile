@@ -19,6 +19,7 @@ Vagrant.configure("2") do |config|
   # `vagrant box outdated`. This is not recommended.
   # config.vm.box_check_update = false
 
+  config.vm.network "forwarded_port", guest: 80, host: 8080
   # # Shiny
   # config.vm.network "forwarded_port", guest: 3838, host: 3838
   # # RStudio
