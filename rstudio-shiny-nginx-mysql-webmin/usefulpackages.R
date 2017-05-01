@@ -1,7 +1,6 @@
 options("repos"="http://cran.rstudio.com") # set the cran mirror
 
-packages = c(
-"devtools",
+packages = c("devtools",
 "dplyr",
 "ggmap",
 "ggplot2",
@@ -10,6 +9,7 @@ packages = c(
 "knitr",
 "latticeExtra",
 "markdown",
+"NLP",
 "parallel",
 "plyr",
 "png",
@@ -26,6 +26,8 @@ packages = c(
 "sp",
 "stringr",
 "tidyr",
+"tm",
+"wordcloud",
 "XLConnect",
 "xts")
 
