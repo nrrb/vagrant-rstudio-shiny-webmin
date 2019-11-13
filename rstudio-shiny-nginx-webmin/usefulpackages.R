@@ -1,6 +1,7 @@
 options("repos"="http://cran.rstudio.com") # set the cran mirror
 
-packages = c("devtools",
+packages = c("base64enc",
+"devtools",
 "dplyr",
 "ggmap",
 "ggplot2",
@@ -21,6 +22,7 @@ packages = c("devtools",
 "RJDBC",
 "RJSONIO",
 "RMySQL",
+"rmarkdown",
 "rstudio",
 "shiny",
 "sp",
