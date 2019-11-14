@@ -40,6 +40,7 @@ if (length(packages) != 0){
 }
 
 # Packages from github are installed unconditionally
-ghpackages = c("rstudio/htmltools","trestletech/shinyTable","rstudio/rmarkdown","rstudio/shiny")
+ghpackages = c("rstudio/htmltools","trestletech/shinyTable")
 devtools::install_github(ghpackages)
+devtools::install_github("fzettelmeyer/mktg482", upgrade = "never", force = TRUE)
 update.packages(ask=FALSE)
