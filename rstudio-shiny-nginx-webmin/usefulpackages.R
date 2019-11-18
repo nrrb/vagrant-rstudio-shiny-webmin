@@ -1,6 +1,6 @@
 options("repos"="http://cran.rstudio.com") # set the cran mirror
 
-packages = c("base64enc",
+base_packages = c("base64enc",
 "devtools",
 "dplyr",
 "ggmap",
@@ -34,6 +34,12 @@ packages = c("base64enc",
 "XLConnect",
 "xts")
 
+# Add packages required in fzettelmeyer's mktg482_R_installation.Rmd file
+fz_packages = c('rmarkdown', 'gmodels', 'modelr', 'janitor', 'haven', 'readxl', 
+                'knitr', 'psych', 'statar', 'tidyverse', 'devtools', 'lfe', 'Matrix')
+packages = c(base_packages, fz_packages)
+
+
 packages = setdiff(packages, installed.packages()[,"Package"])
 if (length(packages) != 0){
   (install.packages(packages, dep=c("Depends", "Imports")))
@@ -42,5 +48,6 @@ if (length(packages) != 0){
 # Packages from github are installed unconditionally
 ghpackages = c("rstudio/htmltools","trestletech/shinyTable")
 devtools::install_github(ghpackages)
+# Other tools used in fzettelmeyer's MKTG-482 class
 devtools::install_github("fzettelmeyer/mktg482", upgrade = "never", force = TRUE)
 update.packages(ask=FALSE)
